@@ -22,13 +22,16 @@ function App() {
       <div className="App">
         <div className="App-header">
           <div> Quiz:{quiz.length}</div>
+
+          {quiz.map((q) => (
+            <div key={q.id}>
+              <h3>{q.question}</h3>
+              <p>1 : {q.options[0]}</p>
+              <p>2 : {q.options[1]}</p>
+              <p>3 : {q.options[2]}</p>
+            </div>
+          ))}
         </div>
-        {quiz.map((q) => (
-          <div key={q.id}>
-            <div {...q.question}></div>
-            <div {...q.options}></div>
-          </div>
-        ))}
       </div>
     </>
   );
