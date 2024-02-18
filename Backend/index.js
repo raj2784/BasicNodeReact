@@ -37,5 +37,5 @@ app.get("/api/quiz", (req, res) => {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`server is serving on http://localhost:${port}`);
+  console.log(`Server is serving on http://localhost:${port}`);
 });
